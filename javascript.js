@@ -17,16 +17,22 @@ function compare () {
     } else if (playerChoice === "Paper" && compChoice === "Rock") {
         gameText.textContent = ("You chose " + playerChoice + ", they chose " + compChoice + "! You win!")
     } else if (playerChoice === "Paper" && compChoice === "Scissors") {
-        gameText.textContent = ("You chose " + playerChoice + ", they chose " + compChoice + "! You lost!")
+        gameText.textContent = ("You chose " + playerChoice + ", they chose " + compChoice + "! You lose!")
     } else if (playerChoice == "Scissors" && compChoice === "Paper") {
         gameText.textContent = ("You chose " + playerChoice + ", they chose " + compChoice + "! You win!")
     } else if (playerChoice == "Scissors" && compChoice === "Rock") {
         gameText.textContent = ("You chose " + playerChoice + ", they chose " + compChoice + "! You lose!")
+    } else if (playerChoice === "Rock" && compChoice === "Paper") {
+            gameText.textContent = ("You chose " + playerChoice + ", they chose " + compChoice + "! You lose!")
+    } else if (playerChoice === "Rock" && compChoice === "Scissors") {
+            gameText.textContent = ("You chose " + playerChoice + ", they chose " + compChoice + "! You win!")
+    } else {
+        gameText.textContent = ("")
     }
 }
 
 function makePcChoice () {
-    compChoice = "Rock"
+    compChoice = "Paper"
     compare();
 }
 
