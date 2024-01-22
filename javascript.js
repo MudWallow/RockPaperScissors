@@ -6,6 +6,7 @@ const scissorsButton = document.querySelector('.scissors');
 const gameText = document.querySelector('.gameText');
 let playerChoice;
 let compChoice;
+const choiceOptions = ["Rock", "Paper", "Scissors"];
 rockButton.addEventListener("click", choseRock);
 paperButton.addEventListener("click", chosePaper);
 scissorsButton.addEventListener("click", choseScissors);
@@ -32,14 +33,14 @@ function compare () {
 }
 
 function makePcChoice () {
-    compChoice = "Paper"
+    compChoice = choiceOptions[Math.floor(Math.random() * choiceOptions.length)];
+    console.log("Computer choice: " + compChoice);
     compare();
 }
 
 function choseRock () {
     playerChoice = "Rock";
     makePcChoice();
-
 }
 
 function chosePaper () {
